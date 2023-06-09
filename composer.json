@@ -1,12 +1,12 @@
 {
-    "name": "wayofdev/laravel-package-tpl",
+    "name": "wayofdev/laravel-open-docs",
     "description": "PHP package template with GitHub Actions",
     "type": "library",
     "license": "MIT",
     "homepage": "https://wayof.dev",
     "support": {
-        "issues": "https://github.com/wayofdev/laravel-package-tpl/issues",
-        "source": "https://github.com/wayofdev/laravel-package-tpl"
+        "issues": "https://github.com/wayofdev/laravel-open-docs/issues",
+        "source": "https://github.com/wayofdev/laravel-open-docs"
     },
     "authors": [
         {
@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": "^8.2",
-        "illuminate/contracts": "^v10.13"
+        "zircote/swagger-php": "^4.7"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.31",
@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "WayOfDev\\Package\\": "src/"
+            "WayOfDev\\OpenDocs\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "WayOfDev\\Package\\App\\": "tests/app/",
-            "WayOfDev\\Package\\Tests\\": "tests/src/"
+            "WayOfDev\\OpenDocs\\App\\": "tests/app/",
+            "WayOfDev\\OpenDocs\\Tests\\": "tests/src/"
         }
     },
     "scripts": {
@@ -63,7 +63,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "WayOfDev\\Package\\Bridge\\Laravel\\Providers\\PackageServiceProvider"
+                "WayOfDev\\OpenDocs\\Bridge\\Laravel\\Providers\\OpenDocsServiceProvider"
             ]
         },
         "composer-normalize": {
