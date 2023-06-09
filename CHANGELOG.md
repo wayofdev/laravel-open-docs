@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/wayofdev/laravel-open-docs/compare/v1.0.0...v1.0.1) (2023-06-09)
+
+
+### Bug Fixes
+
+* wrong controller paths ([596dc31](https://github.com/wayofdev/laravel-open-docs/commit/596dc319029a68e6cc03681cdb69f29598cf541a))
+
 ## 1.0.0 (2023-06-09)
 
 
