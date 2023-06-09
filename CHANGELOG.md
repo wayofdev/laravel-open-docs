@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/wayofdev/laravel-open-docs/compare/v1.0.1...v1.1.0) (2023-06-09)
+
+
+### Features
+
+* update view files ([c8074cc](https://github.com/wayofdev/laravel-open-docs/commit/c8074cccb245aec933cdbf42b67f1e75c598a4b0))
+
 ## [1.0.1](https://github.com/wayofdev/laravel-open-docs/compare/v1.0.0...v1.0.1) (2023-06-09)
 
 
