@@ -12,7 +12,7 @@ final class SwaggerController extends Controller
     public function index(): View
     {
         $settings = config('open-docs.documentation_source');
-        $filePath = url('api-docs/' . $settings['filename'] . '.json');
+        $filePath = url($settings['filename'] . '.json');
         $version = config('open-docs.frontend.swagger.version');
 
         return view('open-docs::swagger.index', [

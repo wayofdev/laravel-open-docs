@@ -20,7 +20,7 @@ final class SwaggerControllerTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertViewIs('open-docs::swagger.index');
-        $response->assertViewHas('documentationFile', URL::to('api-docs/openapi.json'));
+        $response->assertViewHas('documentationFile', URL::to('openapi.json'));
         $response->assertViewHas('swaggerVersion', config('open-docs.frontend.swagger.version'));
     }
 }
