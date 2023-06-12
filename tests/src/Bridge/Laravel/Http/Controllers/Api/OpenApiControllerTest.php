@@ -11,15 +11,21 @@ use function json_decode;
 
 final class OpenApiControllerTest extends TestCase
 {
+    public function setUp(): void
+    {
+        parent::setUp();
+    }
+
     /**
      * @test
      */
-    public function it_gets_json_output_from_docs_route(): void
+    public function it_gets_json_output_from_docs_route_using_file(): void
     {
+        config()->set('open-docs.documentation_source.on_fly', false);
+
         $this->copyStubFile('openapi.json');
 
         $response = $this->get(route('open-docs.docs'));
-
         $response->assertStatus(200);
         $response->assertJson(
             json_decode(
@@ -27,5 +33,15 @@ final class OpenApiControllerTest extends TestCase
                 true
             )
         );
+    }
+
+    public function it_gets_json_output_from_docs_route_on_fly(): void
+    {
+        config()->set('open-docs.documentation_source.on_fly', true);
+
+        $this->copyStubFile('openapi.json');
+
+        $response = $this->get(route('open-docs.docs'));
+        $response->assertStatus(200);
     }
 }

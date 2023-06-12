@@ -25,6 +25,11 @@ return [
 
     'documentation_source' => [
         /*
+         * Should documentation be generated on fly
+         */
+        'on_fly' => true,
+
+        /*
          * Do conversion from yml to json.
          */
         'convert' => true,
