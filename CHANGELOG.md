@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/wayofdev/laravel-open-docs/compare/v1.2.0...v1.2.1) (2023-06-12)
+
+
+### Bug Fixes
+
+* allow on-fly option ([7687c34](https://github.com/wayofdev/laravel-open-docs/commit/7687c34931822d904190b68e450fef528b092577))
+
 ## [1.2.0](https://github.com/wayofdev/laravel-open-docs/compare/v1.1.3...v1.2.0) (2023-06-12)
 
 
