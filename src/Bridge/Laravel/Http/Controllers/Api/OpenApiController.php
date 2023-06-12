@@ -7,8 +7,8 @@ namespace WayOfDev\OpenDocs\Bridge\Laravel\Http\Controllers\Api;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Artisan;
-
 use WayOfDev\OpenDocs\Bridge\Laravel\Console\Commands\GenerateCommand;
+
 use function file_exists;
 use function file_get_contents;
 use function json_decode;
