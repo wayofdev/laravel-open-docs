@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/wayofdev/laravel-open-docs/compare/v1.1.3...v1.2.0) (2023-06-12)
+
+
+### Features
+
+* allow to generate docs on fly ([e7629bd](https://github.com/wayofdev/laravel-open-docs/commit/e7629bd8ca15402e307039b9f5313cd19c2a93d8))
+
 ## [1.1.3](https://github.com/wayofdev/laravel-open-docs/compare/v1.1.2...v1.1.3) (2023-06-11)
 
 
