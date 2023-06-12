@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/wayofdev/laravel-open-docs/compare/v1.2.1...v1.3.0) (2023-06-12)
+
+
+### Features
+
+* return openapi contents through api controller ([f6a2945](https://github.com/wayofdev/laravel-open-docs/commit/f6a294596e69b017498d4d62ac267fee7e0d5b82))
+
 ## [1.2.1](https://github.com/wayofdev/laravel-open-docs/compare/v1.2.0...v1.2.1) (2023-06-12)
 
 
