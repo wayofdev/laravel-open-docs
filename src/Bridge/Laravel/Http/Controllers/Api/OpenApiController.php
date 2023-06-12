@@ -6,7 +6,8 @@ namespace WayOfDev\OpenDocs\Bridge\Laravel\Http\Controllers\Api;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
-use OpenApi\Generator;
+use Illuminate\Support\Facades\Artisan;
+use WayOfDev\OpenDocs\Bridge\Laravel\Console\Commands\GenerateCommand;
 
 use function file_exists;
 use function file_get_contents;
@@ -20,18 +21,9 @@ final class OpenApiController extends Controller
             return response()->json($this->respondFromFile());
         }
 
-        $exclude = [];
-        $pattern = '*.php';
+        Artisan::call(GenerateCommand::class);
 
-        $openapi = Generator::scan(
-            config('open-docs.documentation_source.paths', []),
-            [
-                'exclude' => $exclude,
-                'pattern' => $pattern,
-            ]
-        );
-
-        return response()->json(json_decode($openapi->toJson()));
+        return response()->json($this->respondFromFile());
     }
 
     private function respondFromFile(): object

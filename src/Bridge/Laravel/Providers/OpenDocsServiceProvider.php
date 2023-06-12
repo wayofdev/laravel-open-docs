@@ -17,10 +17,9 @@ final class OpenDocsServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__ . '/../../../../config/open-docs.php' => config_path('open-docs.php'),
             ], 'config');
-
-            $this->registerConsoleCommands();
         }
 
+        $this->registerConsoleCommands();
         $this->loadRoutesFrom(__DIR__ . '/../../../../routes/web.php');
     }
 
