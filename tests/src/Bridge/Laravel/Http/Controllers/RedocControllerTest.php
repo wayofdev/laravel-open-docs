@@ -20,7 +20,7 @@ final class RedocControllerTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertViewIs('open-docs::redoc.index');
-        $response->assertViewHas('documentationFile', URL::to('openapi.json'));
+        $response->assertViewHas('documentationFile', URL::route('open-docs.docs'));
         $response->assertViewHas('redocVersion', '2.0.0');
     }
 }

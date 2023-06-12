@@ -17,10 +17,9 @@ final class SwaggerControllerTest extends TestCase
         $this->copyStubFile('openapi.json');
 
         $response = $this->get(route('open-docs.swagger'));
-
         $response->assertStatus(200);
         $response->assertViewIs('open-docs::swagger.index');
-        $response->assertViewHas('documentationFile', URL::to('openapi.json'));
+        $response->assertViewHas('documentationFile', URL::route('open-docs.docs'));
         $response->assertViewHas('swaggerVersion', config('open-docs.frontend.swagger.version'));
     }
 }
