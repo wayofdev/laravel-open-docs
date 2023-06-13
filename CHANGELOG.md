@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/wayofdev/laravel-open-docs/compare/v1.3.0...v1.3.1) (2023-06-13)
+
+
+### Miscellaneous
+
+* **deps:** update dependency orchestra/testbench to v8.5.7 ([3b52a02](https://github.com/wayofdev/laravel-open-docs/commit/3b52a02d3d21d7ec51768832e38c3cb00dfea95b))
+
 ## [1.3.0](https://github.com/wayofdev/laravel-open-docs/compare/v1.2.1...v1.3.0) (2023-06-12)
 
 
