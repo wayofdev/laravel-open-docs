@@ -15,8 +15,6 @@ Route::group(['as' => 'open-docs.'], static function (): void {
         foreach (config('open-docs.collections', []) as $name => $config) {
             $url = Arr::get($config, $product . '.route.url');
 
-            // dd($url);
-
             if (null === $url) {
                 continue;
             }
