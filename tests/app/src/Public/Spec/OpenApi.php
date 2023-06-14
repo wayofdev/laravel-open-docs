@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WayOfDev\OpenDocs\App\Controllers;
+namespace WayOfDev\OpenDocs\App\Public\Spec;
 
 use OpenApi\Attributes as OA;
 

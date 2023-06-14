@@ -16,6 +16,7 @@
     ],
     "require": {
         "php": "^8.2",
+        "laravel/framework": "^10.13",
         "zircote/swagger-php": "^4.7"
     },
     "require-dev": {
@@ -40,7 +41,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "WayOfDev\\OpenDocs\\App\\": "tests/app/",
+            "WayOfDev\\OpenDocs\\App\\": "tests/app/src/",
             "WayOfDev\\OpenDocs\\Tests\\": "tests/src/"
         }
     },
