@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.3](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.2...v2.0.3) (2023-06-14)
+
+
+### Miscellaneous
+
+* **deps:** update dependency wayofdev/cs-fixer-config to v1.2.13 ([31f22b8](https://github.com/wayofdev/laravel-open-docs/commit/31f22b886c930168c3a0af277415d050f55f0bdd))
+
 ## [2.0.2](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.1...v2.0.2) (2023-06-14)
 
 
