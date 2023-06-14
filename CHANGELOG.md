@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/wayofdev/laravel-open-docs/compare/v1.3.3...v2.0.0) (2023-06-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* support multiple openapi collections
+
+### Features
+
+* support multiple openapi collections ([a2d8d81](https://github.com/wayofdev/laravel-open-docs/commit/a2d8d81ad4a1f7efe655af20460101dbb7853a61))
+
 ## [1.3.3](https://github.com/wayofdev/laravel-open-docs/compare/v1.3.2...v1.3.3) (2023-06-14)
 
 
