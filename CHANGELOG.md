@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.0...v2.0.1) (2023-06-14)
+
+
+### Bug Fixes
+
+* on fly config param was taken from wrong path ([75bf8b2](https://github.com/wayofdev/laravel-open-docs/commit/75bf8b2e7f6abc3837c2c70b292c3dc96ae91869))
+
 ## [2.0.0](https://github.com/wayofdev/laravel-open-docs/compare/v1.3.3...v2.0.0) (2023-06-14)
 
 
