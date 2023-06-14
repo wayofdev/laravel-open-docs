@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.3](https://github.com/wayofdev/laravel-open-docs/compare/v1.3.2...v1.3.3) (2023-06-14)
+
+
+### Miscellaneous
+
+* **deps:** update dependency nunomaduro/larastan to v2.6.3 ([fa1a677](https://github.com/wayofdev/laravel-open-docs/commit/fa1a677cabda00a4ffc5a324adfc0510f733a498))
+
 ## [1.3.2](https://github.com/wayofdev/laravel-open-docs/compare/v1.3.1...v1.3.2) (2023-06-14)
 
 
