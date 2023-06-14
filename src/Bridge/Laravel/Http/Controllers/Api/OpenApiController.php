@@ -29,7 +29,7 @@ final class OpenApiController extends Controller
     {
         $collection = $request->segment(2);
 
-        if (config('open-docs.documentation_source.on_fly') === true) {
+        if (config('open-docs.on_fly') === true) {
             Artisan::call(GenerateCommand::class, [
                 'collection' => $collection,
             ]);
