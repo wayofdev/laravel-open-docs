@@ -1,28 +1,39 @@
 <?php
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
 use WayOfDev\OpenDocs\Bridge\Laravel\Http\Controllers\Api\OpenApiController;
-use WayOfDev\OpenDocs\Bridge\Laravel\Http\Controllers\RedocController;
-use WayOfDev\OpenDocs\Bridge\Laravel\Http\Controllers\SwaggerController;
 
-Route::get(
-    config('open-docs.routing.docs.route'),
-    OpenApiController::class . '@index'
-)->name('open-docs.docs')
-    ->middleware(config('open-docs.routing.docs.middleware', []));
+Route::group(['as' => 'open-docs.'], static function (): void {
+    $products = array_keys(
+        config('open-docs.frontend')
+    );
+    foreach ($products as $product) {
+        if (false === config('open-docs.frontend.' . $product . '.enabled', true)) {
+            continue;
+        }
+        foreach (config('open-docs.collections', []) as $name => $config) {
+            $url = Arr::get($config, $product . '.route.url');
 
-if (true === config('open-docs.frontend.redoc.enabled', true)) {
-    Route::get(
-        config('open-docs.routing.ui.route'),
-        RedocController::class . '@index'
-    )->name('open-docs.redoc')
-        ->middleware(config('open-docs.routing.ui.middleware', []));
-}
+            // dd($url);
 
-if (true === config('open-docs.frontend.swagger.enabled', true)) {
-    Route::get(
-        config('open-docs.routing.console.route'),
-        SwaggerController::class . '@index'
-    )->name('open-docs.swagger')
-        ->middleware(config('open-docs.routing.console.middleware', []));
-}
+            if (null === $url) {
+                continue;
+            }
+            $controller = config('open-docs.frontend.' . $product . '.controller');
+            Route::get($url, [$controller, 'index'])
+                ->name($name . '.api-' . $product);
+        }
+    }
+});
+
+Route::group(['as' => 'open-docs.'], static function (): void {
+    foreach (config('open-docs.collections', []) as $name => $config) {
+        $url = Arr::get($config, 'docs.route.url');
+        if (null === $url) {
+            continue;
+        }
+        Route::get($url, [OpenApiController::class, 'index'])
+            ->name($name . '.specification');
+    }
+});

@@ -5,31 +5,40 @@ declare(strict_types=1);
 namespace WayOfDev\OpenDocs\Bridge\Laravel\Console\Commands;
 
 use Illuminate\Console\Command;
+use OpenApi\Annotations\OpenApi;
 use OpenApi\Generator;
+use WayOfDev\OpenDocs\Contracts\ConfigRepository;
 
 use function file_put_contents;
 
 final class GenerateCommand extends Command
 {
-    protected $signature = 'open-docs:generate';
+    protected $signature = 'open-docs:generate {collection} {--format=json}';
 
     protected $description = 'Regenerate open api docs.';
 
-    public function handle(): void
+    public function handle(ConfigRepository $config): int
     {
-        $settings = config('open-docs.documentation_source');
-        $paths = $settings['paths'];
-        $saveTo = $settings['save_to'];
-        $filename = $settings['filename'];
-        $yamlOutputPath = $saveTo . '/' . $filename . '.yaml';
-        $jsonOutputPath = $saveTo . '/' . $filename . '.json';
+        $collection = $this->argument('collection');
+        $collectionExists = $config->collections()->has($collection);
 
+        if (false === $collectionExists) {
+            $this->error('Collection "' . $collection . '" does not exist.');
+
+            return self::FAILURE;
+        }
+
+        $paths = $config->collectionPaths($collection);
+
+        /** @var OpenApi $openapi */
         $openapi = Generator::scan($paths);
 
-        file_put_contents($yamlOutputPath, $openapi->toYaml());
-        $this->info('OpenAPI YAML documentation generated at ' . $yamlOutputPath);
+        $format = $this->option('format');
 
-        file_put_contents($jsonOutputPath, $openapi->toJson());
-        $this->info('OpenAPI JSON documentation generated at ' . $jsonOutputPath);
+        $path = $config->outputPath($collection, $format);
+        file_put_contents($path, $openapi->toJson());
+        $this->info('OpenAPI JSON documentation generated at ' . $path);
+
+        return self::SUCCESS;
     }
 }

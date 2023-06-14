@@ -2,7 +2,15 @@
 
 declare(strict_types=1);
 
+use WayOfDev\OpenDocs\Bridge\Laravel\Http\Controllers\RedocController;
+use WayOfDev\OpenDocs\Bridge\Laravel\Http\Controllers\SwaggerController;
+
 return [
+    /*
+     * Should documentation be generated on fly or loaded from file.
+     */
+    'on_fly' => true,
+
     'frontend' => [
         /*
          * Should swagger be enabled by default
@@ -11,6 +19,8 @@ return [
             'enabled' => env('OPEN_DOCS_SWAGGER_ENABLED', true),
 
             'version' => '4.19.0',
+
+            'controller' => SwaggerController::class,
         ],
 
         /*
@@ -20,85 +30,53 @@ return [
             'enabled' => env('OPEN_DOCS_REDOC_ENABLED', true),
 
             'version' => '2.0.0',
+
+            'controller' => RedocController::class,
         ],
     ],
 
-    'documentation_source' => [
-        /*
-         * Should documentation be generated on fly
-         */
-        'on_fly' => true,
-
-        /*
-         * Do conversion from yml to json.
-         */
-        'convert' => true,
-
-        /*
-         * Documentation file type. Supported types are compatible with OpenApi 3 specification:
-         * yml, json
-         */
-        'extension' => 'yml',
-
-        /*
-         * Directory paths, which will be scanned for controllers.
-         */
-        'paths' => [
-            app_path('Http/Controllers'),
-        ],
-
-        /*
-         * Filename, without extension.
-         */
-        'filename' => 'openapi',
-
-        /*
-         * Where to save converted documentation
-         */
-        'save_to' => base_path('public/'),
-    ],
-
-    'views' => [
-        /*
-         * Absolute path to views directory
-         */
-        'path' => base_path('resources/views/vendor/open-docs'),
-    ],
-
-    'routing' => [
-        /*
-         * JSON documentation output
-         */
-        'docs' => [
-            /*
-             * Route for accessing converted json file
-             */
-            'route' => '/docs',
-
-            'middleware' => [
+    'collections' => [
+        'public' => [
+            'docs' => [
+                'route' => [
+                    'url' => '/api/public/docs',
+                ],
+            ],
+            'redoc' => [
+                'route' => [
+                    'url' => '/api/public/redoc',
+                ],
+            ],
+            'swagger' => [
+                'route' => [
+                    'url' => '/api/public/swagger',
+                ],
+            ],
+            'paths' => [
+                base_path('src/Application/Dto'),
+                app_path('Public'),
             ],
         ],
 
-        /*
-         * UI Interface
-         */
-        'ui' => [
-            /*
-             * Route for accessing Redoc UI API interface
-             */
-            'route' => '/api/redoc',
-
-            'middleware' => [
+        'admin' => [
+            'docs' => [
+                'route' => [
+                    'url' => '/api/admin/docs',
+                ],
             ],
-        ],
-
-        'console' => [
-            /*
-             * Route for accessing Swagger UI API interface
-             */
-            'route' => '/api/swagger',
-
-            'middleware' => [
+            'redoc' => [
+                'route' => [
+                    'url' => '/api/admin/redoc',
+                ],
+            ],
+            'swagger' => [
+                'route' => [
+                    'url' => '/api/admin/swagger',
+                ],
+            ],
+            'paths' => [
+                base_path('src/Application/Dto'),
+                app_path('Admin'),
             ],
         ],
     ],

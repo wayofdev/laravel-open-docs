@@ -12,12 +12,24 @@ final class GenerateCommandTest extends TestCase
     /**
      * @test
      */
-    public function it_generates_openapi_files(): void
+    public function it_generates_openapi_files_for_public_collection(): void
     {
-        Artisan::call('open-docs:generate');
+        Artisan::call('open-docs:generate public');
         $output = Artisan::output();
 
-        $this::assertStringContainsString('OpenAPI YAML documentation generated at', $output);
         $this::assertStringContainsString('OpenAPI JSON documentation generated at', $output);
+        $this::assertFileExists(public_path('public-openapi.json'));
+    }
+
+    /**
+     * @test
+     */
+    public function it_generates_openapi_files_for_admin_collection(): void
+    {
+        Artisan::call('open-docs:generate admin');
+        $output = Artisan::output();
+
+        $this::assertStringContainsString('OpenAPI JSON documentation generated at', $output);
+        $this::assertFileExists(public_path('admin-openapi.json'));
     }
 }
