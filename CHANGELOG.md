@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.23](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.22...v2.0.23) (2023-07-01)
+
+
+### Miscellaneous
+
+* **deps:** update dependency pestphp/pest to v2.8.1 ([4acad46](https://github.com/wayofdev/laravel-open-docs/commit/4acad462fc4a2826e8f625f65a5b7cafee07e14d))
+
 ## [2.0.22](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.21...v2.0.22) (2023-07-01)
 
 
