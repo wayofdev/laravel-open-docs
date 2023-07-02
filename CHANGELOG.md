@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.24](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.23...v2.0.24) (2023-07-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency laravel/framework to v10.14.1 ([c74d9b1](https://github.com/wayofdev/laravel-open-docs/commit/c74d9b1568ea94eed2b0928b54c3f1ace1d5d396))
+
 ## [2.0.23](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.22...v2.0.23) (2023-07-01)
 
 
