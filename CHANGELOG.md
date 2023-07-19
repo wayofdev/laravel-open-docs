@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.41](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.40...v2.0.41) (2023-07-19)
+
+
+### Miscellaneous
+
+* **deps:** update dependency phpunit/phpunit to v10.2.6 ([3cd0119](https://github.com/wayofdev/laravel-open-docs/commit/3cd01191d5c097d02478d5a14bd2206ba2dfdee6))
+
 ## [2.0.40](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.39...v2.0.40) (2023-07-17)
 
 
