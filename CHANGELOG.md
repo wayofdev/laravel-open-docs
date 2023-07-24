@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.46](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.45...v2.0.46) (2023-07-24)
+
+
+### Miscellaneous
+
+* **deps:** update dependency pestphp/pest to v2.9.5 ([0b21646](https://github.com/wayofdev/laravel-open-docs/commit/0b216460280cd99048502a861635cfbf17237d93))
+
 ## [2.0.45](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.44...v2.0.45) (2023-07-24)
 
 
