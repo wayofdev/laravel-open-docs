@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.59](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.58...v2.0.59) (2023-08-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency laravel/framework to v10.17.1 ([a95fcba](https://github.com/wayofdev/laravel-open-docs/commit/a95fcba73e68d27066eaadbb8a8eff4de3aef672))
+
 ## [2.0.58](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.57...v2.0.58) (2023-08-03)
 
 
