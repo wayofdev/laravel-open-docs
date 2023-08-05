@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.63](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.62...v2.0.63) (2023-08-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency zircote/swagger-php to v4.7.11 ([14f638f](https://github.com/wayofdev/laravel-open-docs/commit/14f638f88e817a27d50e9b042ac8459575561066))
+
 ## [2.0.62](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.61...v2.0.62) (2023-08-04)
 
 
