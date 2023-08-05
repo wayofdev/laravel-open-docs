@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.64](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.63...v2.0.64) (2023-08-05)
+
+
+### Miscellaneous
+
+* **deps:** update phpstan packages ([c49528b](https://github.com/wayofdev/laravel-open-docs/commit/c49528bc6e4ac819d682fcebadae2954f0257958))
+
 ## [2.0.63](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.62...v2.0.63) (2023-08-05)
 
 
