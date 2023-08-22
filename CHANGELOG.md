@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.84](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.83...v2.0.84) (2023-08-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency laravel/framework to v10.19.0 ([d946bb4](https://github.com/wayofdev/laravel-open-docs/commit/d946bb437952754032b60fd39713180a47b69a1d))
+
+
+### Miscellaneous
+
+* **deps:** update dependency phpstan/phpstan to v1.10.30 ([fba32da](https://github.com/wayofdev/laravel-open-docs/commit/fba32daeec0fe02401961db47dcd81eab25b7aed))
+
 ## [2.0.83](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.82...v2.0.83) (2023-08-21)
 
 
