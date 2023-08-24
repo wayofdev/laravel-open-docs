@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.86](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.85...v2.0.86) (2023-08-24)
+
+
+### Miscellaneous
+
+* **deps:** update dependency phpstan/phpstan to v1.10.31 ([5f83fd0](https://github.com/wayofdev/laravel-open-docs/commit/5f83fd000290776dfc430dea11aff5453ea55e0d))
+
 ## [2.0.85](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.84...v2.0.85) (2023-08-22)
 
 
