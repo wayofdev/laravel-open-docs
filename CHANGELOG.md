@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.91](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.90...v2.0.91) (2023-08-25)
+
+
+### Miscellaneous
+
+* **deps:** update dependency phpstan/phpstan-phpunit to v1.3.14 ([2041927](https://github.com/wayofdev/laravel-open-docs/commit/20419278619c1579d1b28633349bd3a7fb023d6c))
+
 ## [2.0.90](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.89...v2.0.90) (2023-08-25)
 
 
