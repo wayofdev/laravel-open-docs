@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.99](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.98...v2.0.99) (2023-09-04)
+
+
+### Miscellaneous
+
+* **deps:** update dependency ergebnis/composer-normalize to v2.36.0 ([c48d155](https://github.com/wayofdev/laravel-open-docs/commit/c48d15578b3d0c5653c1370b091f8c6ff7e90e06))
+
 ## [2.0.98](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.97...v2.0.98) (2023-09-04)
 
 
