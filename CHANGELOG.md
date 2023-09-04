@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.100](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.99...v2.0.100) (2023-09-04)
+
+
+### Miscellaneous
+
+* **deps:** update actions/checkout action to v4 ([6fcbeb5](https://github.com/wayofdev/laravel-open-docs/commit/6fcbeb513804447ad618ae7939ebbe730e1e9feb))
+
 ## [2.0.99](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.98...v2.0.99) (2023-09-04)
 
 
