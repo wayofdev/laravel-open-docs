@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.107](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.106...v2.0.107) (2023-09-14)
+
+
+### Miscellaneous
+
+* **deps:** update codecov/codecov-action action to v4 ([4a487f2](https://github.com/wayofdev/laravel-open-docs/commit/4a487f2ce3aed29a0b8ee0b8cf934fd6e02b8669))
+
 ## [2.0.106](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.105...v2.0.106) (2023-09-14)
 
 
