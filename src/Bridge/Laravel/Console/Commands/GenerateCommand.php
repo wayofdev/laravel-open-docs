@@ -22,7 +22,7 @@ final class GenerateCommand extends Command
         $collection = $this->argument('collection');
         $collectionExists = $config->collections()->has($collection);
 
-        if (false === $collectionExists) {
+        if ($collectionExists === false) {
             $this->error('Collection "' . $collection . '" does not exist.');
 
             return self::FAILURE;

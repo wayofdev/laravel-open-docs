@@ -21,15 +21,26 @@ final class Config implements ConfigRepository
     ];
 
     private readonly bool $onFly;
+
     private readonly array $frontend;
 
     private readonly Collection $collections;
+
+    public function __construct(
+        bool $onFly,
+        array $frontend,
+        array $collections,
+    ) {
+        $this->onFly = $onFly;
+        $this->frontend = $frontend;
+        $this->collections = new Collection($collections);
+    }
 
     public static function fromArray(array $config): self
     {
         $missingAttributes = array_diff(self::REQUIRED_FIELDS, array_keys($config));
 
-        if ([] !== $missingAttributes) {
+        if ($missingAttributes !== []) {
             throw MissingRequiredAttributes::fromArray(
                 implode(',', $missingAttributes)
             );
@@ -40,16 +51,6 @@ final class Config implements ConfigRepository
             $config['frontend'],
             $config['collections'],
         );
-    }
-
-    public function __construct(
-        bool $onFly,
-        array $frontend,
-        array $collections,
-    ) {
-        $this->onFly = $onFly;
-        $this->frontend = $frontend;
-        $this->collections = new Collection($collections);
     }
 
     public function onFly(): bool
