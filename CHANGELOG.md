@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.108...v2.1.0) (2024-05-27)
+
+
+### Features
+
+* add laravel 11 support ([525b3cd](https://github.com/wayofdev/laravel-open-docs/commit/525b3cdeba94ac0c9301915806f601d5998e37e1))
+
 ## [2.0.108](https://github.com/wayofdev/laravel-open-docs/compare/v2.0.107...v2.0.108) (2023-09-14)
 
 
